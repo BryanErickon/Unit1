@@ -1,27 +1,44 @@
 package app;
+import java.util.Scanner;
 
-import jdk.dynalink.DynamicLinker;
+
+
 
 public class App {
     public static void main(String[] args) throws Exception {
-        String person1 = "Dylan";
-        String person2 = "Mario";
-        String verb1 = "swim";
-        String verb2 = "watch";
-        String verb3 = "touching";
-        String food = "Haggis";
-        String dayOfWeek = "Monday";
-        String place1 = "North Korea";
-        String place2 = "Japan";
-        String adjective1 = "Jumping";
-        String adjective2 = "driving";
+      
+      Scanner noun = new Scanner(System.in);
 
-        System.out.println(person1 + " " + "is a programmer who likes to " + verb1 +".");
-        System.out.println("Every " + dayOfWeek + " they make a " + adjective1 + " " + food + " " + "for breakfast and " + verb2 + " " + "at " + place1 + " " + "with" + " " + person2 + ".");
-        System.out.println("Sometimes, they go to the " + adjective2 + " " + place2 + " " + "with" + person2 + " so that they can" + " " + verb3 + " " + "together.");
+      System.out.println("Please enter a proper noun");
+      String noun2 = noun.nextLine();
+      System.out.println("this is a " + noun2);
+
+      Scanner adj = new Scanner(System.in);
+      System.out.println("Please enter an adjective");
+      String adj2 = adj.nextLine();
+      System.out.println("the " + noun2 + " is " + adj2);
+
+      Scanner place = new Scanner(System.in);
+      System.out.println("enter a place");
+      String place2 = place.nextLine();
+      System.out.println("Your place is " + place2);
+
+      Scanner verb = new Scanner(System.in);
+      System.out.println("Please enter a past tense verb");
+      String verb2 = verb.nextLine();
+      System.out.println("Your verb is " + verb2);
+
+      Scanner food = new Scanner(System.in);
+      System.out.println("Please enter a food");
+      String food2 = food.nextLine();
+      System.out.println("Your food is " + food2);
+
+      System.out.println("One day, a " + adj2 + " " + noun2 + " " + "in " + place2 + " " + verb2 + " some " +  food2);
 
 
-        
+
+
+
 
     }
 }
