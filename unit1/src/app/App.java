@@ -15,9 +15,10 @@ public class App {
         int number2 = number.nextInt();
         System.out.println("The number you have chose is " + number2);
 
-        while (number2 <= 9) {
-            System.out.println(color2);
-            number2 = number2 + 1;
+        while (9 > number2) {
+            number2 = number2 + 1; 
+            
+            
             
             
         }
