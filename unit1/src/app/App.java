@@ -11,12 +11,25 @@ public class App {
         System.out.println("You have chosen " + color2 + " as your color");
 
         Scanner number = new Scanner(System.in);
-        System.out.println("Enter a number between 0-9");
+        System.out.println("Enter a number");
         int number2 = number.nextInt();
         System.out.println("The number you have chose is " + number2);
 
-        while (9 > number2) {
-            number2 = number2 + 1; 
+        int i = 1;
+
+       
+
+        while (i <= number2){
+            System.out.println(color2);
+            i++;
+
+        }
+           
+            
+            
+
+            
+
             
             
             
@@ -27,4 +40,4 @@ public class App {
 
 
 
-    }
+    
