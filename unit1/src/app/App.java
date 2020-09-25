@@ -1,27 +1,43 @@
 package app;
-import java.util.Scanner;
+
 
 
 public class App {
     public static void main(String[] args) throws Exception {
 
-        Scanner color = new Scanner(System.in);
-        System.out.println("Please enter a color");
-        String color2 = color.nextLine();
-        System.out.println("You have chosen " + color2 + " as your color");
+        
 
-        Scanner number = new Scanner(System.in);
-        System.out.println("Enter a number");
-        int number2 = number.nextInt();
-        System.out.println("The number you have chose is " + number2);
+        for (int i = 10; i <= 20; i = i +1){
+            System.out.println("The count is " + i);
+            System.out.println(" Let's keep counting.");
+        }
 
-        int i = 1;
+        for (int z = 10; z <= 100; z = z +1){
+            System.out.println("The count is " + z);
+            System.out.println("Keep it up");
+        }
+
+        for (int w = 1000; w <= 256000; w = w +1){
+            System.out.println("The number is currently at " + w);
+            System.out.println("This may take a bit");
+        }
+        
+        
+        for (int t = 11; t <= 12; t = t+1){
+            System.out.println("Your number is currently " + t);
+            System.out.println("You will arrive at the number shortly");
+
+        }
+
+        for (int y = 10; y >= 0; y = y-1){
+            System.out.println("Your current number is " + y);
+            System.out.println("Your number is currently counting down");
+        }
+        
 
        
 
-        while (i <= number2){
-            System.out.println(color2);
-            i++;
+        
 
         }
            
@@ -36,7 +52,7 @@ public class App {
             
         }
 
-        }
+        
 
 
 
