@@ -1,45 +1,59 @@
 package app;
 
+import java.util.Scanner;
 
 
 public class App {
     public static void main(String[] args) throws Exception {
 
+        Scanner q1 =  new Scanner(System.in);
+        System.out.println("How many states are there?");
+        String input1 = q1.nextLine();
+        String answer1 = "fifty";
+        
+    if (input1.equals(answer1)){
+        System.out.println("You are correct");
+    }
+    else {
+     System.out.println("You are wrong");
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+}
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+
         
 
-        for (int i = 10; i <= 20; i = i +1){
-            System.out.println("The count is " + i);
-            System.out.println(" Let's keep counting.");
-        }
-
-        for (int z = 10; z <= 100; z = z +1){
-            System.out.println("The count is " + z);
-            System.out.println("Keep it up");
-        }
-
-        for (int w = 1000; w <= 256000; w = w +1){
-            System.out.println("The number is currently at " + w);
-            System.out.println("This may take a bit");
-        }
         
-        
-        for (int t = 11; t <= 12; t = t+1){
-            System.out.println("Your number is currently " + t);
-            System.out.println("You will arrive at the number shortly");
-
-        }
-
-        for (int y = 10; y >= 0; y = y-1){
-            System.out.println("Your current number is " + y);
-            System.out.println("Your number is currently counting down");
-        }
-        
-
-       
-
-        
-
-        }
            
             
             
@@ -50,7 +64,7 @@ public class App {
             
             
             
-        }
+        
 
         
 
