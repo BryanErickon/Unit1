@@ -77,24 +77,8 @@ public class App {
     }
 
     
-    if (score == 5){
-        System.out.println("You got 5/5");
-    }
-    if (score == 4){
-        System.out.println("You got 4/5");
-    }
-    if (score == 3){
-        System.out.println("You got 3/5");
-    }
-    if (score == 2){
-        System.out.println("You got 2/5");
-    }
-    if (score == 1){
-        System.out.println("You got 1/5");
-    }
-    if (score == 0){
-        System.out.println("You got 0/5");
-    }
+    System.out.println("You got " + score + " out of 5");
+      
 }
 }
 
@@ -134,3 +118,4 @@ public class App {
 
 
     
+
