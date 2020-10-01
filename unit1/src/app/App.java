@@ -6,82 +6,27 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
 
+    Scanner input = new Scanner(System.in);
+    System.out.println("Please enter a number between 1-5 for a fact about Garter Snakes");
+    int userInput = input.nextInt();
 
-
-        int score = 0;
-
-        Scanner q1 =  new Scanner(System.in);
-        System.out.println("How many states are there?");
-        String input1 = q1.nextLine();
-        String answer1 = "fifty";
-        
-    if (input1.equals(answer1)){
-        score++;
-        System.out.println("You are correct");
+    if (userInput == 1) {
+        System.out.println("Garter snakes belong to the Genus Thamnophis");
+    } else if (userInput == 2) {
+        System.out.println("Garter snakes can be 46 to 137 cm in length");
+    } else if (userInput == 3) {
+          System.out.println("Garter snakes are closely related to the genus Nerodia (water snakes)");
+    } else if (userInput == 4) {
+          System.out.println("Garter snakes have complex systems of pheromonal communication");
+    } else if (userInput == 5) {
+        System.out.println("Garter snakes, like all snakes, are carnivorous.");
     }
     else {
-     System.out.println("You are wrong");
+        System.out.println("Error, the number you have chose is not in the specified range");
+  
     }
-
-    Scanner q2 = new Scanner(System.in);
-    System.out.println("What is the chemical formula for salt?");
-    String input2 = q2.nextLine();
-    String answer2 = "NaCl";
-
-    if (input2.equals(answer2)){
-        score++;
-        System.out.println("That is right");
     }
-    else {
-        System.out.println("That is wrong");
-    }
-
-    Scanner q3 = new Scanner(System.in);
-    System.out.println("What is the class of Star Destroyers that the Republic used?");
-    String input3 = q3.nextLine();
-    String answer3 = "Venator class";
-
-    if (input3.equals(answer3)){
-        score++;
-        System.out.println("You are a real jedi");
-    }
-    else {
-        System.out.println("You are a sith imposter");
-    }
-
-    Scanner q4 = new Scanner(System.in);
-    System.out.println("Is Lego Star Wars the Complete Saga the best game of all time?");
-    String input4 = q4.nextLine();
-    String answer4 = "Yes";
-    if (input4.equals(answer4)){
-        score++;
-        System.out.println("That is the right answer");
-
-
-    }
-    else {
-        System.out.println("You are wrong");
-    }
-
-    Scanner q5 = new Scanner(System.in);
-    System.out.println("Is steak good?");
-    String input5 = q5.nextLine();
-    String answer5 = "Yes";
-
-    if (input5.equals(answer5)){
-        score++;
-        System.out.println("You are right");
-    }
-    else {
-        System.out.println("That is wrong");
-    }
-
-    
-    System.out.println("You got " + score + " out of 5");
-      
 }
-}
-
 
 
 
@@ -106,16 +51,4 @@ public class App {
             
 
             
-
-            
-            
-            
-            
-        
-
-        
-
-
-
-    
 
