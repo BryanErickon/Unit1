@@ -25,17 +25,27 @@ if (input.equals(correct)) {
         String input2 = password2.nextLine();
         if (input2.equals(correct)) {
      System.out.println("That is correct");
-    
-
+ } else {
+     do {
+          failCount--;
+        System.out.println("You have gotten the password wrong, you have "  + failCount + " tries left");
+        fail++;
+        Scanner password3 = new Scanner(System.in);
+        System.out.println("Please try again");
+        String input3 = password3.nextLine();
+     
  }
+
+
+
     }
   while (fail <= 3) ;}
  
 
-    }
+    
 
 
-}
+
 
 
 
