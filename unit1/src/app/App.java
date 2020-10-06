@@ -10,29 +10,47 @@ Scanner password = new Scanner(System.in);
 System.out.println("What's the password?");
 String input = password.nextLine();
 String correct = "Tacos";
-int fail = 0;
+int failCount = 2;
 
-while (fail <=3) {
+
 if (input.equals(correct)) {
     System.out.println("Password accepted");
-} else { fail++;
-    System.out.println("Wrong password");
+} else {
+    for (int fail = 0; fail <= 2; fail++) {
+        failCount--;
+        System.out.println("You have gotten the password wrong, you have " + failCount + " tries left");
+    Scanner password2 = new Scanner(System.in);
+        System.out.println("Please try again");
+        String input2 = password2.nextLine();
+        if (input2.equals(correct)) {
+         System.out.println("Password accepted");
+    }
 }
+    
 
-} 
+
+
     }
 
 
 
-
-
-
-
-
-
-
-
 }
+}
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
     
 
 
