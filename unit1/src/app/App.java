@@ -16,12 +16,10 @@ public class App {
         if (input == 59) {
             System.out.println("Correct!");
         } else { 
-            
             do {
                 if (input <= 58 || input2 <= 58 || input3 <=58) {
                     System.out.println("Too low, try again");
                       int input2 = number.nextInt();
-                 
                 } else if (input >= 60 || input2 >= 60 || input3 >= 60) {
                     System.out.println("Too high, try again");
                     int input3 = number.nextInt();
