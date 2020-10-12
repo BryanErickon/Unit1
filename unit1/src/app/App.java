@@ -6,31 +6,52 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
-         int target = 58;
-        boolean isFinished = false;
-        while (isFinished == false) {
+Scanner input1 = new Scanner(System.in);
+System.out.println("Please enter a number");
+int number1 = input1.nextInt();
+Scanner input2 = new Scanner(System.in);
+System.out.println("Please enter another number");
+int number2 = input2.nextInt();
 
-        Scanner number = new Scanner(System.in);
-        System.out.println("Please guess a number between 0 and 100");
-        int input = number.nextInt();
-        number.nextLine();
-       
+if (number1 < number2){
+for (number1++; number1 <= number2; number1++){
+    if (number1 %2 ==0){
+        System.out.println(number1);
+    }else {
 
-        if (input == target){
-            System.out.println("Correct");
-            isFinished = true;
-        } else  {
-            if (input > target) {
-                System.out.println("Too high");
-            }
-                else {
-                    System.out.println("Too low");
-                }
-                
-             
-            } 
-            
-            }
+    }
+}
+}else {
+    for (number1--; number1 >= number2; number1--){
+        if (number1 %2 == 0){
+            System.out.println(number1);
         }
+    }
+}
+    
+
+
+
+
+
+
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+        
