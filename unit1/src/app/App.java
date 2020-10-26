@@ -10,18 +10,17 @@ public class App {
         Random spin = new Random();
         int betNum = 10;
         int resultNum = spin.nextInt(37);
-        int resultColor = 1 + spin.nextInt(3) - 1;
         int betSum = 100;
         String insideBet = "inside";
         Scanner inorout = new Scanner(System.in);
         String check = "yes";
         
-
-        System.out.println("Would you like to make an inside bet or an outside bet?");
-        String inorout1 = inorout.nextLine();
-
-        if (inorout1.equals(insideBet)) {
-           do{
+            System.out.println("Would you like to make an inside bet or an outside bet?");  
+            String inorout1 = inorout.nextLine();
+  
+           while (betNum > 0); { 
+               if (inorout1.equals(insideBet)) {
+                 
                 betNum--;
                 Scanner chosenNum = new Scanner(System.in);
                 System.out.println("What number so you want to bet on?");
@@ -35,12 +34,12 @@ public class App {
                 System.out.println("You have " + betNum + " bets remaining. Would you like to bet again?"); 
                 Scanner again = new Scanner(System.in);
                 String again1 = again.nextLine();
-                String a = "yes";
-                if  (again1.equals(a)){
-                    boolean repeat = true;
-                }
-            } while (betNum > 0 && repeat == true );
-        }
+                
+                
+           }}}}
+                   
+                
+            
 
 
 
@@ -55,6 +54,6 @@ public class App {
 
 
 
-    }
+    
 
-}
+
