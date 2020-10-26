@@ -14,13 +14,11 @@ public class App {
         String insideBet = "inside";
         Scanner inorout = new Scanner(System.in);
         String check = "yes";
-        
-            System.out.println("Would you like to make an inside bet or an outside bet?");  
+
+        while (betNum > 0) {
+            System.out.println("Would you like to make an inside bet or an outside bet?");
             String inorout1 = inorout.nextLine();
-  
-           while (betNum > 0); { 
-               if (inorout1.equals(insideBet)) {
-                 
+            if (inorout1.equals(insideBet)) {
                 betNum--;
                 Scanner chosenNum = new Scanner(System.in);
                 System.out.println("What number so you want to bet on?");
@@ -31,29 +29,11 @@ public class App {
                 String betAmount1 = bet.nextLine();
                 System.out.println("You have bet $" + betAmount1 + " on " + chosenNum1);
 
-                System.out.println("You have " + betNum + " bets remaining. Would you like to bet again?"); 
+                System.out.println("You have " + betNum + " bets remaining. Would you like to bet again?");
                 Scanner again = new Scanner(System.in);
                 String again1 = again.nextLine();
-                
-                
-           }}}}
-                   
-                
-            
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
+            }
+        }
+    }
+}
