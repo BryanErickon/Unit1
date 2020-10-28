@@ -21,7 +21,6 @@ public class App {
         boolean b = true;
 
         while (betNum > 0 && a == true || a == false && b == true ) {
-            
             Scanner inorout = new Scanner(System.in);
             System.out.println("Would you like to make an inside bet or an outside bet?");
             String inorout1 = inorout.nextLine();
@@ -33,7 +32,7 @@ public class App {
 
                 System.out.println("How much do you want to bet on " + chosenNum1);
                 Scanner bet = new Scanner(System.in);
-                String betAmount1 = bet.nextLine();
+                int betAmount1 = bet.nextInt();
                 System.out.println("You have bet $" + betAmount1 + " on " + chosenNum1);
 
                 System.out.println("You have " + betNum + " bets remaining. Would you like to bet again?");
@@ -59,22 +58,17 @@ public class App {
                 String broebet1 = broebet.nextLine();
 
                 if (broe1.equals(black)) {
-                    System.out.println("You have bet " + broebet1 + " on black");
-
+                    System.out.println("You have bet $" + broebet1 + " on black");
                 } else if (broe1.equals(red)) {
-                    System.out.println("You have bet " + broebet1 + " on red");
-
+                    System.out.println("You have bet $" + broebet1 + " on red");
                 } else if (broe1.equals(odd)) {
-                    System.out.println("You have bet " + broebet1 + " on odd");
-
+                    System.out.println("You have bet $" + broebet1 + " on odd");
                 } else if (broe.equals(even)) {
-                    System.out.println("You have bet " + broebet1 + " on even");
-
+                    System.out.println("You have bet $" + broebet1 + " on even");
                 }
                 System.out.println("You have " + betNum + " bets remaining. Would you like to bet again?");
                 Scanner again = new Scanner(System.in);
                 String again1 = again.nextLine();
-                 a = true;
                  if (!(again1.equals(check))){
                      b = false;
                  }else {
@@ -82,6 +76,15 @@ public class App {
                  }
 
             }
-        }
+        }       System.out.println("The number that was chosen was " + resultNum + " " + color[resultNum]);
+                    if (chosenNum1.equals(resultNum)){
+                       betAmount1 = betAmount1*35;
+
+                    }
+
+
+
+
+
     }
 }
