@@ -23,8 +23,10 @@ public class App {
 
          
         while (betNum > 0 && a == true || a == false && b == true ) {
-            // test
+            // testline 
             System.out.println(resultNum + " " + color[resultNum]);
+            // end test line
+            System.out.println("You have $" + betSum);
             Scanner inorout = new Scanner(System.in);
             System.out.println("Would you like to make an inside bet or an outside bet?");
             String inorout1 = inorout.nextLine();
@@ -68,46 +70,29 @@ public class App {
                 System.out.println("How much do you want to bet?");
                 int broebet1 = broebet.nextInt();
                 System.out.println("You have bet $" + broebet1 );
-                if (broe1.equals(black)) {
-                    if (broe1.equals(color[resultNum])){
-                        betSum = broebet1 * 2 + betNum;
-                        System.out.println("$" + betSum + " left");
-                    } else {
-                        betSum = betSum - broebet1;
-                        System.out.println("$" + betSum + " left");
-                    }
-                } else if (broe1.equals(red)) {
-                    if (broe1.equals(color[resultNum])){
-                        betSum = broebet1 * 2 + betNum;
-                        System.out.println("$" + betSum + " left");
-                    }else {
-                        betSum = betSum - broebet1;
-                        System.out.println("$" + betSum + " left");
-                    }
 
-                } else if (broe1.equals(odd)) {
-                    if (resultNum %2 != 0){
-                        if (broe1.equals(color[resultNum])){
+                // if black is chosen
+                if (broe1.equals(black) && broe1.equals(color[resultNum])) {
                         betSum = broebet1 * 2 + betNum;
                         System.out.println("$" + betSum + " left");
-                    }else {
+                    } // if red is chosen
+                    else if (broe1.equals(red) && broe1.equals(color[resultNum])){
+                        betSum = broebet1 * 2 + betNum;
+                        System.out.println("$" + betSum + " left");
+                    } // if odd is chosen
+                    else if (broe1.equals(odd) && resultNum %2 != 0){
+                         betSum = broebet1 * 2 + betNum;
+                        System.out.println("$" + betSum + " left");
+                    } // if even is chosen
+                    else if (broe1.equals(even) && resultNum %2 == 0){
+                        betSum = broebet1 * 2 + betNum;
+                        System.out.println("$" + betSum + " left");
+                    } // if none of those bets are true
+                    else {
                         betSum = betSum - broebet1;
                         System.out.println("$" + betSum + " left");
                     }
-                    
-                } else if (broe1.equals(even)) {
-                    if (resultNum %2 == 0){
-                        if (broe1.equals(color[resultNum])){
-                        betSum = broebet1 * 2 + betNum;
-                        System.out.println("$" + betSum + " left");
-                    }else {
-                        betSum = betSum - broebet1;
-                        System.out.println("$" + betSum + " left");
-                    }
-                    }
-
-                }
-                System.out.println("You have " + betNum + " bets remaining. Would you like to bet again?");
+                     System.out.println("You have " + betNum + " bets remaining. Would you like to bet again?");
                 Scanner again = new Scanner(System.in);
                 String again1 = again.nextLine();
                  if (!(again1.equals(check))){
@@ -115,13 +100,14 @@ public class App {
                  }else {
                      a = true;
                  }
+                } System.out.println("The number that was chosen was " + resultNum + " " + color[resultNum]);
+               
 
             } 
                    
-        }       
-    }System.out.println("The number that was chosen was " + resultNum + " " + color[resultNum]);
-}
-
+        
+       
+        }
 }
 
                     
