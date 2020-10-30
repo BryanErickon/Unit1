@@ -19,7 +19,9 @@ public class App {
                 "red" };
         boolean a = false;
         boolean b = true;
+        boolean c = true;
 
+        while (c == true); {
         while (betNum > 0 && a == true || a == false && b == true ) {
             Scanner inorout = new Scanner(System.in);
             System.out.println("Would you like to make an inside bet or an outside bet?");
@@ -28,12 +30,19 @@ public class App {
                 betNum--;
                 Scanner chosenNum = new Scanner(System.in);
                 System.out.println("What number so you want to bet on?");
-                String chosenNum1 = chosenNum.nextLine();
+                int chosenNum1 = chosenNum.nextInt();
 
                 System.out.println("How much do you want to bet on " + chosenNum1);
                 Scanner bet = new Scanner(System.in);
                 int betAmount1 = bet.nextInt();
                 System.out.println("You have bet $" + betAmount1 + " on " + chosenNum1);
+                if (chosenNum1 == resultNum){
+                   betSum = betAmount1 * 2 + betSum;
+                   System.out.println(betSum);
+                }else {
+                 betSum = betSum - betAmount1;
+                 System.out.println(betSum);
+                }
 
                 System.out.println("You have " + betNum + " bets remaining. Would you like to bet again?");
                 Scanner again = new Scanner(System.in);
@@ -75,16 +84,16 @@ public class App {
                      a = true;
                  }
 
-            }
-        }       System.out.println("The number that was chosen was " + resultNum + " " + color[resultNum]);
-                    if (chosenNum1.equals(resultNum)){
-                       betAmount1 = betAmount1*35;
+            } System.out.println("The number that was chosen was " + resultNum + " " + color[resultNum]);
+                   
+        }       
 
-                    }
+                    
 
 
 
 
 
     }
+}
 }
