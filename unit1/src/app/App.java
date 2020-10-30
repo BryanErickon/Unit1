@@ -21,7 +21,7 @@ public class App {
         boolean b = true;
         boolean c = true;
 
-        while (c == true); {
+         
         while (betNum > 0 && a == true || a == false && b == true ) {
             Scanner inorout = new Scanner(System.in);
             System.out.println("Would you like to make an inside bet or an outside bet?");
@@ -95,5 +95,4 @@ public class App {
 
 
     }
-}
 }
