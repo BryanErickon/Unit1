@@ -21,7 +21,7 @@ public class App {
         boolean b = true;
         boolean c = true;
 
-         
+        while (c == true){
         while (betNum > 0 && a == true || a == false && b == true ) {
             // testline 
             System.out.println(resultNum + " " + color[resultNum]);
@@ -40,6 +40,11 @@ public class App {
                 Scanner bet = new Scanner(System.in);
                 int betAmount1 = bet.nextInt();
                 System.out.println("You have bet $" + betAmount1 + " on " + chosenNum1);
+                
+                // if too high a bet is made
+                if (betAmount1 > betSum){
+                    c = false;
+                }
                 if (chosenNum1 == resultNum){
                    betSum = betAmount1 * 35 + betSum;
                    System.out.println("$" + betSum + " left");
@@ -66,28 +71,34 @@ public class App {
                 String red = "red";
                 String odd = "odd";
                 String even = "even";
+                String green = "green";
                 Scanner broebet = new Scanner(System.in);
                 System.out.println("How much do you want to bet?");
                 int broebet1 = broebet.nextInt();
                 System.out.println("You have bet $" + broebet1 );
-
+                // if they make too high of a bet
+                if (broebet1 > betSum){
+                    c = false;
+                }
                 // if black is chosen
                 if (broe1.equals(black) && broe1.equals(color[resultNum])) {
-                        betSum = broebet1 * 2 + betNum;
+                        betSum = broebet1 * 2 + betSum;
                         System.out.println("$" + betSum + " left");
                     } // if red is chosen
                     else if (broe1.equals(red) && broe1.equals(color[resultNum])){
-                        betSum = broebet1 * 2 + betNum;
+                        betSum = broebet1 * 2 + betSum;
                         System.out.println("$" + betSum + " left");
                     } // if odd is chosen
                     else if (broe1.equals(odd) && resultNum %2 != 0){
-                         betSum = broebet1 * 2 + betNum;
+                         betSum = broebet1 * 2 + betSum;
                         System.out.println("$" + betSum + " left");
                     } // if even is chosen
                     else if (broe1.equals(even) && resultNum %2 == 0){
-                        betSum = broebet1 * 2 + betNum;
+                        betSum = broebet1 * 2 + betSum;
                         System.out.println("$" + betSum + " left");
-                    } // if none of those bets are true
+                    } else if (color[resultNum].equals(green)){
+                        betSum = betSum - broebet1;
+                    }
                     else {
                         betSum = betSum - broebet1;
                         System.out.println("$" + betSum + " left");
@@ -101,15 +112,17 @@ public class App {
                      a = true;
                  }
                 } System.out.println("The number that was chosen was " + resultNum + " " + color[resultNum]);
-               
+                System.out.println("Would you like to play again?");
+                Scanner playAgain = new Scanner(System.in);
+                String playAgain1 = playAgain.nextLine();
+               if (!(playAgain1.equals(check))){
+                   c = false;
+               }
 
             } 
-                   
-        
-       
-        }
+        } System.out.println("You have $" + betSum + " left");
 }
-
+}
                     
 
 
